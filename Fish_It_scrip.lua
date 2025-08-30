@@ -41,9 +41,11 @@ Rayfield:Notify({
    Image = nil,
 })
 
-local Button = MainTab:CreateButton({
-   Name = "Auto Fishing",
-   Callback = function()
-   -- The function that takes place when the button is pressed
-   end,
-})
+local MainTab = Window:CreateTab("🎣 Fishing", 4483362458)
+local MainSection = MainTab:CreateSection("Auto Fishing")
+local AutoFishing, AutoPerfect, AutoAmazing = false, false, false 
+
+MainTab:CreateToggle({ Name="Auto Fishing & Catch", CurrentValue=false, Flag="AutoFishing", Callback=function(v) AutoFishing=v end })
+MainTab:CreateToggle({ Name="Auto Perfect", CurrentValue=false, Flag="AutoPerfect", Callback=function(v) AutoPerfect=v end })
+MainTab:CreateToggle({ Name="Auto Amazing", CurrentValue=false, Flag="AutoAmazing", Callback=function(v) AutoAmazing=v end })
+
