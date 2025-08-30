@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "🐬UPD FISH IT🐬",
-   LoadingTitle = "Example Hub",
+   LoadingTitle = "FISH IT JAV",
    LoadingSubtitle = "by Javanica",
    ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -31,3 +31,19 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+local MainTab = Window:CreateTab("🎣Fishing", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "You executed the script",
+   Content = "Support to javanica id",
+   Duration = 5,
+   Image = nil,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Auto Fishing",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
